@@ -1,24 +1,4 @@
-# vue_test
+# Vue.js Crash Course
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+→ [Vue JS Crash Course](https://youtu.be/Wy9q22isx3U) by Traversy Media on Youtube.  
+→ [Code-Repository](https://github.com/bradtraversy/vue_crash_todolist) on GitHub.

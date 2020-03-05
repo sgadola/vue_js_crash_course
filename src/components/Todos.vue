@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-for="todo in todos" v-bind:key="todo.id">
-            <TodoItem v-bind:todo="todo" v-on:del-todo="$emit('del-todo', todo.id)"/>
+            <TodoItem v-bind:todo="todo" v-on:delete-todo="$emit('delete-todo', todo.id)"/>
         </div>
     </div>
 </template>
@@ -11,7 +11,7 @@
     import TodoItem from "./TodoItem";
 
     export default {
-        name: 'Todos',
+        name: "Todos",
         components: {
             TodoItem
         },

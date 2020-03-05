@@ -1,9 +1,13 @@
 <template>
     <div class="todo-item" v-bind:class="{'is-complete':todo.completed}">
         <p>
-            <input type="checkbox" v-on:change="markComplete">
+            <input type="checkbox" v-model="todo.completed">
+            <!--
+            <input type="checkbox" v-on:change="markComplete" v-model="todo.completed">
+            v-model is syntactical sugar: https://stackoverflow.com/a/41001483
+            -->
             {{todo.title}}
-            <button class="del" @click="$emit('del-todo', todo.id)">X</button>
+            <button class="delete" @click="$emit('delete-todo', todo.id)">X</button>
         </p>
     </div>
 </template>
@@ -13,11 +17,11 @@
     export default {
         name: "TodoItem",
         props: ["todo"],
-        methods: {
-            markComplete() {
-                this.todo.completed = !this.todo.completed;
-            }
-        }
+        // methods: {
+        //     markComplete() {
+        //         this.todo.completed = !this.todo.completed;
+        //     }
+        // }
     }
 </script>
 
@@ -33,7 +37,7 @@
         text-decoration: line-through;
     }
 
-    .del {
+    .delete {
         background: #ff0000;
         color: #fff;
         border: none;
